@@ -2,56 +2,56 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="97" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+  <suite name="Suite1" duration-ms="46" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
     <groups>
     </groups>
-    <test name="test1" duration-ms="97" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+    <test name="test1" duration-ms="46" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
       <class name="com.my_qa_guide.demo.TestngAnnotation">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeSuite" is-config="true" duration-ms="29" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeSuite" is-config="true" duration-ms="19" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeTest" is-config="true" duration-ms="1" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeTest" is-config="true" duration-ms="0" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeClass" is-config="true" duration-ms="1" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeMethod" is-config="true" duration-ms="3" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="testCase1" duration-ms="21" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="testCase1()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="testCase1" duration-ms="2" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCase1 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterMethod" is-config="true" duration-ms="2" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="testCase2()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="testCase2" duration-ms="0" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="testCase2()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="testCase2" duration-ms="0" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCase2 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterMethod" is-config="true" duration-ms="2" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterClass" is-config="true" duration-ms="2" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterClass" is-config="true" duration-ms="2" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterTest" is-config="true" duration-ms="1" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterSuite" is-config="true" duration-ms="1" started-at="2018-03-28T10:25:42Z" finished-at="2018-03-28T10:25:42Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.my_qa_guide.demo.TestngAnnotation@3498ed]" name="afterSuite" is-config="true" duration-ms="0" started-at="2018-03-28T11:03:53Z" finished-at="2018-03-28T11:03:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

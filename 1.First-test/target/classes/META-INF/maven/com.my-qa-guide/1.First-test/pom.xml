@@ -23,7 +23,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<!--TestNG dependency -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
@@ -35,6 +35,7 @@
 
 	<build>
 		<plugins>
+			<!-- Configure maven surefire plugin so it use our testng.xml -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>

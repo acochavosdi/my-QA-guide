@@ -61,6 +61,13 @@ public class TestngAnnotation {
 	@AfterSuite
 	public void afterSuite() {
 		System.out.println("in afterSuite");
+
+		System.out.println("\n\nConclusion: \n\nFirst of all, beforeSuite() method is executed only once.\n" + "\n"
+				+ "Lastly, the afterSuite() method executes only once.\n" + "\n"
+				+ "Even the methods beforeTest(), beforeClass(), afterClass(), and afterTest() methods are executed only once.\n"
+				+ "\n" + "beforeMethod() method executes for each test case but before executing the test case.\n"
+				+ "\n" + "afterMethod() method executes for each test case but after executing the test case.\n" + "\n"
+				+ "In between beforeMethod() and afterMethod(), each test case executes.");
 	}
 
 }
