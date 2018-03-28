@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="61" started-at="2018-03-28T09:56:57Z" finished-at="2018-03-28T09:56:57Z">
+  <suite name="Suite1" duration-ms="51" started-at="2018-03-28T10:00:18Z" finished-at="2018-03-28T10:00:18Z">
     <groups>
     </groups>
-    <test name="test1" duration-ms="61" started-at="2018-03-28T09:56:57Z" finished-at="2018-03-28T09:56:57Z">
+    <test name="test1" duration-ms="51" started-at="2018-03-28T10:00:18Z" finished-at="2018-03-28T10:00:18Z">
       <class name="com.my_qa_guide.demo.TestEmployeeDetails">
-        <test-method status="PASS" signature="testCalculateAppriasal()[pri:0, instance:com.my_qa_guide.demo.TestEmployeeDetails@506e6d5e]" name="testCalculateAppriasal" duration-ms="12" started-at="2018-03-28T09:56:57Z" finished-at="2018-03-28T09:56:57Z">
+        <test-method status="PASS" signature="testCalculateAppriasal()[pri:0, instance:com.my_qa_guide.demo.TestEmployeeDetails@506e6d5e]" name="testCalculateAppriasal" duration-ms="11" started-at="2018-03-28T10:00:18Z" finished-at="2018-03-28T10:00:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalculateAppriasal -->
-        <test-method status="PASS" signature="testCalculateYearlySalary()[pri:0, instance:com.my_qa_guide.demo.TestEmployeeDetails@506e6d5e]" name="testCalculateYearlySalary" duration-ms="0" started-at="2018-03-28T09:56:57Z" finished-at="2018-03-28T09:56:57Z">
+        <test-method status="PASS" signature="testCalculateYearlySalary()[pri:0, instance:com.my_qa_guide.demo.TestEmployeeDetails@506e6d5e]" name="testCalculateYearlySalary" duration-ms="0" started-at="2018-03-28T10:00:18Z" finished-at="2018-03-28T10:00:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCalculateYearlySalary -->
