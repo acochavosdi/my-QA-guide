@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="113" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+    <groups>
+    </groups>
+    <test name="test1" duration-ms="113" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+      <class name="com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1">
+        <test-method status="PASS" signature="beforeClassMethod()[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="beforeClassMethod" is-config="true" duration-ms="0" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClassMethod -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="initialize" is-config="true" duration-ms="6" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="testPrimeNumberChecker(java.lang.Integer, java.lang.Boolean)[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="testPrimeNumberChecker" duration-ms="6" started-at="2018-04-02T09:23:23Z" data-provider="test1" finished-at="2018-04-02T09:23:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrimeNumberChecker -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="initialize" is-config="true" duration-ms="1" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="testPrimeNumberChecker(java.lang.Integer, java.lang.Boolean)[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="testPrimeNumberChecker" duration-ms="1" started-at="2018-04-02T09:23:23Z" data-provider="test1" finished-at="2018-04-02T09:23:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrimeNumberChecker -->
+        <test-method status="PASS" signature="testPrimeNumberChecker(java.lang.Integer, java.lang.Boolean)[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="testPrimeNumberChecker" duration-ms="1" started-at="2018-04-02T09:23:23Z" data-provider="test1" finished-at="2018-04-02T09:23:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[19]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrimeNumberChecker -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="initialize" is-config="true" duration-ms="0" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="initialize" is-config="true" duration-ms="1" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="testPrimeNumberChecker(java.lang.Integer, java.lang.Boolean)[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="testPrimeNumberChecker" duration-ms="1" started-at="2018-04-02T09:23:23Z" data-provider="test1" finished-at="2018-04-02T09:23:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[22]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrimeNumberChecker -->
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="initialize" is-config="true" duration-ms="1" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="testPrimeNumberChecker(java.lang.Integer, java.lang.Boolean)[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1@21bcffb5]" name="testPrimeNumberChecker" duration-ms="1" started-at="2018-04-02T09:23:23Z" data-provider="test1" finished-at="2018-04-02T09:23:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[23]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrimeNumberChecker -->
+      </class> <!-- com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider1 -->
+      <class name="com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider2">
+        <test-method status="PASS" signature="beforeClassMethod()[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider2@380fb434]" name="beforeClassMethod" is-config="true" duration-ms="0" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClassMethod -->
+        <test-method status="PASS" signature="testMethod(com.my_qa_guide.Parameterized_Test.demo.Bean)[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider2@380fb434]" name="testMethod" duration-ms="0" started-at="2018-04-02T09:23:23Z" data-provider="test1" finished-at="2018-04-02T09:23:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.my_qa_guide.Parameterized_Test.demo.Bean@604ed9f0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMethod -->
+      </class> <!-- com.my_qa_guide.Parameterized_Test.demo.ParamTestWithDataProvider2 -->
+      <class name="com.my_qa_guide.Parameterized_Test.demo.ParameterizedTest1">
+        <test-method status="PASS" signature="beforeClassMethod()[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParameterizedTest1@5ebec15]" name="beforeClassMethod" is-config="true" duration-ms="26" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClassMethod -->
+        <test-method status="PASS" signature="parameterTest(java.lang.String)[pri:0, instance:com.my_qa_guide.Parameterized_Test.demo.ParameterizedTest1@5ebec15]" name="parameterTest" duration-ms="2" started-at="2018-04-02T09:23:23Z" finished-at="2018-04-02T09:23:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hello-to-our-new-QA-deveS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parameterTest -->
+      </class> <!-- com.my_qa_guide.Parameterized_Test.demo.ParameterizedTest1 -->
+    </test> <!-- test1 -->
+  </suite> <!-- Suite1 -->
+</testng-results>
