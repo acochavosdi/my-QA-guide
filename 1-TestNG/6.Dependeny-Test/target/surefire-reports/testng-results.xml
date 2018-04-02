@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="65" started-at="2018-04-02T08:54:37Z" finished-at="2018-04-02T08:54:37Z">
+    <groups>
+      <group name="init">
+        <method signature="DependencyTestUsingAnnotationDependsOnGroups.initEnvironmentTest()[pri:0, instance:com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups@35f983a6]" name="initEnvironmentTest" class="com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups"/>
+        <method signature="DependencyTestUsingAnnotationDependsOnGroups.testPrintMessage()[pri:0, instance:com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups@35f983a6]" name="testPrintMessage" class="com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups"/>
+      </group> <!-- init -->
+    </groups>
+    <test name="test1" duration-ms="65" started-at="2018-04-02T08:54:37Z" finished-at="2018-04-02T08:54:37Z">
+      <class name="com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups">
+        <test-method status="PASS" signature="initEnvironmentTest()[pri:0, instance:com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups@35f983a6]" name="initEnvironmentTest" duration-ms="0" started-at="2018-04-02T08:54:37Z" finished-at="2018-04-02T08:54:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initEnvironmentTest -->
+        <test-method status="PASS" signature="testPrintMessage()[pri:0, instance:com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups@35f983a6]" name="testPrintMessage" duration-ms="1" started-at="2018-04-02T08:54:37Z" finished-at="2018-04-02T08:54:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrintMessage -->
+        <test-method status="PASS" signature="testSalutationMessage()[pri:0, instance:com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups@35f983a6]" name="testSalutationMessage" duration-ms="1" depends-on-groups="init.*" started-at="2018-04-02T08:54:37Z" finished-at="2018-04-02T08:54:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSalutationMessage -->
+      </class> <!-- com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnGroups -->
+      <class name="com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnMethods">
+        <test-method status="PASS" signature="initEnvironmentTest()[pri:0, instance:com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnMethods@96532d6]" name="initEnvironmentTest" duration-ms="10" started-at="2018-04-02T08:54:37Z" finished-at="2018-04-02T08:54:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initEnvironmentTest -->
+        <test-method status="PASS" signature="testPrintMessage()[pri:0, instance:com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnMethods@96532d6]" name="testPrintMessage" duration-ms="3" started-at="2018-04-02T08:54:37Z" finished-at="2018-04-02T08:54:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPrintMessage -->
+        <test-method status="PASS" signature="testSalutationMessage()[pri:0, instance:com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnMethods@96532d6]" name="testSalutationMessage" duration-ms="1" started-at="2018-04-02T08:54:37Z" depends-on-methods="com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnMethods.initEnvironmentTest" finished-at="2018-04-02T08:54:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSalutationMessage -->
+      </class> <!-- com.my_qa_guide.Dependeny_Test.demo.DependencyTestUsingAnnotationDependsOnMethods -->
+    </test> <!-- test1 -->
+  </suite> <!-- Suite1 -->
+</testng-results>
