@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="81" started-at="2018-04-02T07:27:09Z" finished-at="2018-04-02T07:27:09Z">
+  <suite name="Suite1" duration-ms="64" started-at="2018-04-02T08:56:34Z" finished-at="2018-04-02T08:56:34Z">
     <groups>
     </groups>
-    <test name="test1" duration-ms="81" started-at="2018-04-02T07:27:09Z" finished-at="2018-04-02T07:27:09Z">
+    <test name="test1" duration-ms="64" started-at="2018-04-02T08:56:34Z" finished-at="2018-04-02T08:56:34Z">
       <class name="com.my_qa_guide.Exception_Test.demo.ExpectedExceptionTest">
-        <test-method status="PASS" signature="testPrintMessage()[pri:0, instance:com.my_qa_guide.Exception_Test.demo.ExpectedExceptionTest@96532d6]" name="testPrintMessage" duration-ms="23" started-at="2018-04-02T07:27:09Z" finished-at="2018-04-02T07:27:09Z">
+        <test-method status="PASS" signature="testPrintMessage()[pri:0, instance:com.my_qa_guide.Exception_Test.demo.ExpectedExceptionTest@96532d6]" name="testPrintMessage" duration-ms="19" started-at="2018-04-02T08:56:34Z" finished-at="2018-04-02T08:56:34Z">
           <exception class="java.lang.ArithmeticException">
             <message>
               <![CDATA[/ by zero]]>
@@ -56,7 +56,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPrintMessage -->
-        <test-method status="PASS" signature="testSalutationMessage()[pri:0, instance:com.my_qa_guide.Exception_Test.demo.ExpectedExceptionTest@96532d6]" name="testSalutationMessage" duration-ms="4" started-at="2018-04-02T07:27:09Z" finished-at="2018-04-02T07:27:09Z">
+        <test-method status="PASS" signature="testSalutationMessage()[pri:0, instance:com.my_qa_guide.Exception_Test.demo.ExpectedExceptionTest@96532d6]" name="testSalutationMessage" duration-ms="3" started-at="2018-04-02T08:56:34Z" finished-at="2018-04-02T08:56:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSalutationMessage -->
