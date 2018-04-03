@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="7703" started-at="2018-04-03T07:15:00Z" finished-at="2018-04-03T07:15:07Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="7703" started-at="2018-04-03T07:15:00Z" finished-at="2018-04-03T07:15:07Z">
+      <class name="com.my_qa_guide.TestNg_First_Test.demo.FirstTestWithAnnotations">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstTestWithAnnotations@73a1e9a9]" name="initialize" is-config="true" duration-ms="2548" started-at="2018-04-03T07:15:00Z" finished-at="2018-04-03T07:15:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="testNgAnnotationsFlow()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstTestWithAnnotations@73a1e9a9]" name="testNgAnnotationsFlow" duration-ms="4973" started-at="2018-04-03T07:15:02Z" finished-at="2018-04-03T07:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNgAnnotationsFlow -->
+        <test-method status="PASS" signature="cleanNavigatorAndCloseDriver()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstTestWithAnnotations@73a1e9a9]" name="cleanNavigatorAndCloseDriver" is-config="true" duration-ms="149" started-at="2018-04-03T07:15:07Z" finished-at="2018-04-03T07:15:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanNavigatorAndCloseDriver -->
+      </class> <!-- com.my_qa_guide.TestNg_First_Test.demo.FirstTestWithAnnotations -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
