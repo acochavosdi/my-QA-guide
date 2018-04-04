@@ -135,7 +135,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse-662984406/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--1683838342/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,7 +144,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest&quot;/&gt;
+      &lt;class name=&quot;com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;elementsBasics&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -188,12 +192,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'elementsBasics')
 data.setCell(0, 2, 'com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest')
-data.setCell(0, 3, 2157);
+data.setCell(0, 3, 5880);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -226,11 +230,11 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">elementsBasics</span>
-                <span class="method-start">2689 ms</span>
+                <span class="method-start">2849 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanNavigatorAndCloseDriver</span>
-                <span class="method-start">4850 ms</span>
+                <span class="method-start">8732 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

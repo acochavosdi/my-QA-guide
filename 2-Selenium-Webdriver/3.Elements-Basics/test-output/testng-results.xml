@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5035" started-at="2018-04-03T12:40:19Z" finished-at="2018-04-03T12:40:24Z">
+  <suite name="Default suite" duration-ms="8921" started-at="2018-04-03T13:52:01Z" finished-at="2018-04-03T13:52:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5035" started-at="2018-04-03T12:40:19Z" finished-at="2018-04-03T12:40:24Z">
+    <test name="Default test" duration-ms="8921" started-at="2018-04-03T13:52:01Z" finished-at="2018-04-03T13:52:09Z">
       <class name="com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@73a1e9a9]" name="initialize" is-config="true" duration-ms="2689" started-at="2018-04-03T12:40:19Z" finished-at="2018-04-03T12:40:22Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@185d8b6]" name="initialize" is-config="true" duration-ms="2848" started-at="2018-04-03T13:52:01Z" finished-at="2018-04-03T13:52:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="elementsBasics()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@73a1e9a9]" name="elementsBasics" duration-ms="2157" started-at="2018-04-03T12:40:22Z" finished-at="2018-04-03T12:40:24Z">
+        <test-method status="PASS" signature="elementsBasics()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@185d8b6]" name="elementsBasics" duration-ms="5880" started-at="2018-04-03T13:52:03Z" finished-at="2018-04-03T13:52:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- elementsBasics -->
-        <test-method status="PASS" signature="cleanNavigatorAndCloseDriver()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@73a1e9a9]" name="cleanNavigatorAndCloseDriver" is-config="true" duration-ms="141" started-at="2018-04-03T12:40:24Z" finished-at="2018-04-03T12:40:24Z">
+        <test-method status="PASS" signature="cleanNavigatorAndCloseDriver()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@185d8b6]" name="cleanNavigatorAndCloseDriver" is-config="true" duration-ms="149" started-at="2018-04-03T13:52:09Z" finished-at="2018-04-03T13:52:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanNavigatorAndCloseDriver -->
