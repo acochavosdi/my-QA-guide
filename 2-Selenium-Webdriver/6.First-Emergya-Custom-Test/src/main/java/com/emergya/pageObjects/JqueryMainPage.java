@@ -37,4 +37,5 @@ public class JqueryMainPage extends BasePageObject {
 
 		return status;
 	}
+
 }
