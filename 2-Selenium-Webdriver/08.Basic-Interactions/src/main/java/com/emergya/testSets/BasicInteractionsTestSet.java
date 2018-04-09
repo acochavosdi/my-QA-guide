@@ -94,7 +94,7 @@ public class BasicInteractionsTestSet extends BasicTestSet {
 
 		jqueryMainPage.searchStringOnSearchInput("Draggable");
 		jqueryMainPage.waitUntilTheResultWeWantAndClickOnIt();
-		assertTrue(jqueryDraggablePage.isReady(), "Draggable Page not ready");
+		assertTrue(jqueryDraggablePage.isReady(), "Draggable Page is not ready");
 		Thread.sleep(2000);
 
 		log.info("[log-TestSet] " + this.getClass().getName() + " - End test interactionsBasic method: "
