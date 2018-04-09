@@ -43,11 +43,17 @@ public class IframesTestSet extends BasicTestSet {
 
 	/**
 	 * 
-	 * Description: TODO
+	 * Description: Using the 3 possible methods to work with iframes
 	 * 
 	 * Pre steps: - Open the browser
 	 * 
-	 * Steps: - TODO
+	 * Steps: - Check the visibility of the 3 elements when we have just opened the
+	 * page - Change to the first iframe with the method that accepts an integer as
+	 * an argument and verify again what element is visible - Switch to the second
+	 * iframe with the method that accepts a string identifier as an argument and
+	 * check again wich element is visible - Switch to the first iframe with the
+	 * method that accepts a WebElement as an argument and check again wich element
+	 * is visible
 	 * 
 	 * Post steps: - Close the browser
 	 * 
