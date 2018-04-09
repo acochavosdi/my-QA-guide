@@ -68,11 +68,16 @@ public class ElementsBasicsTest {
 	// ------------------------------------------------------------------- //
 	/**
 	 * 
-	 * Description: TODO
+	 * Description: Get a single element and print some info about him, then do the
+	 * same with a list of elements
 	 * 
 	 * Pre steps: - Open the browser - Navigate to Google - Maximize
 	 * 
-	 * Steps: - TODO
+	 * Steps: - Got to the page with Get Method - Store a selector found in the web
+	 * app by chrome inspector on a String - Check the element is displayed - Store
+	 * the element on a WebElement instance - Print the size and tag of the element
+	 * by log.info - Locate some elements using a selector - Store them on a list -
+	 * Use a for loop to print the text of every element by log.info
 	 * 
 	 * Post steps: - Delete cookies - Close the browser.
 	 * 
@@ -109,7 +114,9 @@ public class ElementsBasicsTest {
 
 		// Step1 - Locate elements with a selector
 		// IMPORTANT: You will probably dont understand this selector, but it doesnt
-		// matter, just accept it works.
+		// matter, just accept it works and you will understand better on the next
+		// section of the tutorial.
+
 		String xpathSelectorToGettingAList = "//ul[@id='menu-top']/li/a";
 
 		// Store the elements on a list
