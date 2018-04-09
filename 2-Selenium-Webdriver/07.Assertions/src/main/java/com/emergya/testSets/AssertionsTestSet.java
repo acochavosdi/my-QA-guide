@@ -1,6 +1,9 @@
 package com.emergya.testSets;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
+import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.assertNotSame;
 import static org.testng.Assert.assertTrue;
 
 import java.lang.reflect.Method;
@@ -98,5 +101,15 @@ public class AssertionsTestSet extends BasicTestSet {
 
 		log.info("[log-TestSet] " + this.getClass().getName() + " - End test assertions method: " + method.getName());
 
+		/*
+		 * TODO
+		 * 
+		 * assertNotEquals(actual1, actual2);
+		 * 
+		 * assertNotNull(object);
+		 * 
+		 * assertNotSame(actual, expected);
+		 * 
+		 */
 	}
 }
