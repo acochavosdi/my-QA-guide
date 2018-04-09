@@ -45,15 +45,19 @@ public class WindowsTestSet extends BasicTestSet {
 	// ---------- US00014 - Windows - Pop Ups and Tabs ------- //
 	// ******************************************************* //
 	/**
-	 * Description: TODO
+	 * Description: Working with "Message windows" and "New Browser Windows"
 	 * 
 	 * Pre steps: - Open the browser
 	 * 
-	 * Steps: - TODO
+	 * Steps: - Launch new Browser - Open the URL TOOLS_WINDOWS_URL - Get Main
+	 * Window name and store it - Click on Button “New Message Window”, it will open
+	 * a Pop Up Window - Get all the Windows name - Print on log.warn the body
+	 * content of the pop-up - Close the Pop Up Window - Get Main Window name and
+	 * store it - Click on Button “New Browser Tab”, it will open a Pop Up Window -
+	 * Get all the Windows name - Enter to the new window and close it after 5
+	 * seconds
 	 * 
 	 * Post steps: - Close the browser
-	 * 
-	 * Conclusion: TODO
 	 * 
 	 * 
 	 * @author acosanchez <acosanchez@emergya.com>
@@ -66,22 +70,6 @@ public class WindowsTestSet extends BasicTestSet {
 		log.info("[log-TestSet] " + this.getClass().getName() + " - Start test handlingWindows method: "
 				+ method.getName());
 
-		/*
-		 * 1) Launch new Browser
-		 * 
-		 * 2) Open URL “http://toolsqa.wpengine.com/automation-practice-switch-windows/”
-		 * 
-		 * 3) Get Main Window name and store it
-		 * 
-		 * 4) Click on Button “New Message Window”, it will open a Pop Up Window
-		 * 
-		 * 5) Get all the Windows name
-		 * 
-		 * 6) Print on log.warn the body content of the pop-up
-		 * 
-		 * 7) Close the Pop Up Window
-		 * 
-		 */
 		driver.get(TOOLS_WINDOWS_URL);
 
 		toolsQAWindowsPage = new ToolsQAWindowsPage(driver);
@@ -91,18 +79,6 @@ public class WindowsTestSet extends BasicTestSet {
 		toolsQAWindowsPage.openThePopUpAndCloseIt();
 
 		driver.sleep(2);
-
-		/*
-		 * 
-		 * 1) Get Main Window name and store it
-		 * 
-		 * 2) Click on Button “New Browser Tab”, it will open a Pop Up Window
-		 * 
-		 * 3) Get all the Windows name
-		 * 
-		 * 4) Enter to the new window and close it after 5 seconds
-		 *
-		 */
 
 		log.info("WORKING WITH A NEW TAB");
 		toolsQAWindowsPage.workWithANewTab();
