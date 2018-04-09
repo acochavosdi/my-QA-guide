@@ -50,11 +50,12 @@ public class ActionsTestSet extends BasicTestSet {
 	// ------------------------------------------------------------------- //
 	/**
 	 * 
-	 * Description: TODO
+	 * Description: Using Actions in 4 different situations
 	 * 
 	 * Pre steps: - Open the browser
 	 * 
-	 * Steps: - TODO
+	 * Steps: - Drag an element - drag & drop an element - Resize an element -
+	 * Select 10 random elements.
 	 * 
 	 * Post steps: - Close the browser
 	 * 
