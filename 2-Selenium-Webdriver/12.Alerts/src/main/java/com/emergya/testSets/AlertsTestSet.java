@@ -41,12 +41,12 @@ public class AlertsTestSet extends BasicTestSet {
 
 	/**
 	 * 
-	 * Description: TODO Working With Alerts
+	 * Description: Working With Alerts
 	 * 
 	 * Pre steps: - Open the browser
 	 * 
-	 * Steps: - TODO Test an alert with text - Test an alert with OK - Test an alert
-	 * with OK and CANCEL
+	 * Steps: - Test an alert with text - Test an alert with OK - Test an alert with
+	 * OK and CANCEL
 	 * 
 	 * Post steps: - Close the browser
 	 * 
