@@ -47,15 +47,10 @@ public class ScrollingAndJavascriptTestSet extends BasicTestSet {
 	 * 
 	 * Steps: - Scroll to Bottom - Scroll to Top - Scroll to an Element - Scroll
 	 * with Javascript to an offset from the current scope - Scroll with Javascript
-	 * to the top of the page, getting the height of the element to work on it.
+	 * to the top of the page, using the height of the element to work on it.
 	 * 
 	 * Post steps: - Close the browser
 	 * 
-	 * Conclusion: TODO
-	 * 
-	 * Acquired Knowledge: - this.scrollBottom() - this.scrollTop() -
-	 * this.scrollTo(this.getElementByXPath(BOOKS_SPAN_XPATH)) - JavascriptExecutor
-	 * - executeScript()
 	 * 
 	 * 
 	 * @author acosanchez <acosanchez@emergya.com>
@@ -71,7 +66,7 @@ public class ScrollingAndJavascriptTestSet extends BasicTestSet {
 
 		driver.get(INDEX_URL);
 		jqueryMainPage = new JqueryMainPage(driver);
-		assertTrue(jqueryMainPage.isReady(), "Main Page not ready");
+		assertTrue(jqueryMainPage.isReady(), "Main Page is not ready");
 
 		jqueryMainPage.usingScrolling();
 
