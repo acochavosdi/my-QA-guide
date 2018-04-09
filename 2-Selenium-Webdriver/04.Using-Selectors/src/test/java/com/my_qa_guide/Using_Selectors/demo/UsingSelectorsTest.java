@@ -11,13 +11,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class UsingSelectors {
+public class UsingSelectorsTest {
 
 	/**
 	 * Logger
 	 */
 
-	static Logger log = Logger.getLogger(UsingSelectors.class);
+	static Logger log = Logger.getLogger(UsingSelectorsTest.class);
 
 	public static final String JQUERY_INDEX_URL = "https://jqueryui.com/";
 	public static final String JQUERY_RESIZABLE_URL = "https://jqueryui.com/resizable/";
@@ -106,6 +106,7 @@ public class UsingSelectors {
 		String idSelector2 = "content-wrapper";
 
 		// Code
+		log.info(" ");
 		log.info("------------- ID SELECTORS!");
 		if (driver.findElements(By.id(idSelector1)).size() != 0)
 			log.info("Tag del elemento1 obtenido por id es: " + driver.findElement(By.id(idSelector1)).getTagName());
@@ -121,6 +122,7 @@ public class UsingSelectors {
 		String nameSelector1 = "s";
 
 		// Code
+		log.info(" ");
 		log.info("-------------NAME SELECTORS!");
 
 		if (driver.findElements(By.name(nameSelector1)).size() != 0)
@@ -136,6 +138,7 @@ public class UsingSelectors {
 		String classNameSelector2 = "content-right";
 
 		// Code
+		log.info(" ");
 		log.info("-------------NAMECLASS SELECTORS!");
 		if (driver.findElements(By.className(classNameSelector1)).size() != 0)
 			log.info("Tag del elemento1 obtenido por nameClass es: "
@@ -156,6 +159,7 @@ public class UsingSelectors {
 		String cssSelector4 = "#content > div.dev-links > ul > li:nth-child(3) > a";
 
 		// Code
+		log.info(" ");
 		log.info("-------------CSS SELECTORS!");
 
 		if (driver.findElements(By.cssSelector(cssSelector1)).size() != 0)
@@ -178,6 +182,7 @@ public class UsingSelectors {
 		/************************** XPATH SELECTORS ***************************/
 		/**********************************************************************/
 
+		log.info(" ");
 		log.info("-------------XPATH SELECTORS!");
 
 		// Selectors
@@ -218,6 +223,7 @@ public class UsingSelectors {
 		/***************** LINKTEXT & PARTIALLINKTEXT SELECTORS ***************/
 		/**********************************************************************/
 
+		log.info(" ");
 		log.info("-------------LINK & PARTIAL LINK SELECTORS!");
 
 		// Selectors
@@ -241,6 +247,7 @@ public class UsingSelectors {
 		/************************ TAGNAME SELECTORS ***************************/
 		/**********************************************************************/
 
+		log.info(" ");
 		log.info("-------------TAG SELECTORS!");
 
 		// Selectors
