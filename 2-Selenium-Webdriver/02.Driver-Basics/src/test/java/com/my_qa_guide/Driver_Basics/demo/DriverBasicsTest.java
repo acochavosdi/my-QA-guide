@@ -34,9 +34,9 @@ public class DriverBasicsTest {
 		// Configure the System Property of the driver using the chromedriver file.
 		// IMPORTANT: I had to grant driver's permission to execute.
 		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
-		// Instance the driver so we can start use it
+		// Instance the driver so we can start using it
 		driver = new ChromeDriver();
-		// Tells the driver go to the www.google.com page
+		// Order the driver to go to the page www.google.com
 		driver.get("http://www.google.com");
 		// Maximize window
 		driver.manage().window().maximize();
@@ -67,8 +67,8 @@ public class DriverBasicsTest {
 	// ------------------------------------------------------------------- //
 	/**
 	 * 
-	 * Description: Basic navigation operations on driver + some get information
-	 * about the current page methods
+	 * Description: Basic navigation operations on driver + get some information
+	 * about the current page with selenium methods
 	 * 
 	 * Pre steps: - Open the browser - Navigate to Google - Maximize
 	 * 

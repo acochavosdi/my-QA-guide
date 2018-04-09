@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.436 sec - in com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.985 sec - in com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest

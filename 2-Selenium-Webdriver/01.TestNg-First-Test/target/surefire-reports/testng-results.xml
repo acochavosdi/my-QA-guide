@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="7888" started-at="2018-04-09T10:42:52Z" finished-at="2018-04-09T10:43:00Z">
+  <suite name="Surefire suite" duration-ms="7533" started-at="2018-04-09T11:06:26Z" finished-at="2018-04-09T11:06:33Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="7888" started-at="2018-04-09T10:42:52Z" finished-at="2018-04-09T10:43:00Z">
+    <test name="Surefire test" duration-ms="7533" started-at="2018-04-09T11:06:26Z" finished-at="2018-04-09T11:06:33Z">
       <class name="com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest@13c78c0b]" name="initialize" is-config="true" duration-ms="2603" started-at="2018-04-09T10:42:53Z" finished-at="2018-04-09T10:42:55Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest@13c78c0b]" name="initialize" is-config="true" duration-ms="2399" started-at="2018-04-09T11:06:26Z" finished-at="2018-04-09T11:06:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="testNgAnnotationsFlow()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest@13c78c0b]" name="testNgAnnotationsFlow" duration-ms="5132" started-at="2018-04-09T10:42:55Z" finished-at="2018-04-09T10:43:00Z">
+        <test-method status="PASS" signature="testNgAnnotationsFlow()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest@13c78c0b]" name="testNgAnnotationsFlow" duration-ms="4968" started-at="2018-04-09T11:06:28Z" finished-at="2018-04-09T11:06:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNgAnnotationsFlow -->
-        <test-method status="PASS" signature="cleanNavigatorAndCloseDriver()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest@13c78c0b]" name="cleanNavigatorAndCloseDriver" is-config="true" duration-ms="131" started-at="2018-04-09T10:43:00Z" finished-at="2018-04-09T10:43:00Z">
+        <test-method status="PASS" signature="cleanNavigatorAndCloseDriver()[pri:0, instance:com.my_qa_guide.TestNg_First_Test.demo.FirstAnnotationsTest@13c78c0b]" name="cleanNavigatorAndCloseDriver" is-config="true" duration-ms="142" started-at="2018-04-09T11:06:33Z" finished-at="2018-04-09T11:06:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanNavigatorAndCloseDriver -->
