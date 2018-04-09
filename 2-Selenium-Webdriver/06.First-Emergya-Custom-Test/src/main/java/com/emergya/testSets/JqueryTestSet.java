@@ -41,11 +41,15 @@ public class JqueryTestSet extends BasicTestSet {
 	// ------------------------------------------------------------------- //
 
 	/**
-	 * Description: TODO
+	 * Description: First steps with Page Object Model + Emergya Driver +
+	 * BasicTestSet + Handler
 	 * 
 	 * Pre steps: - Open the browser
 	 * 
-	 * Steps: TODO
+	 * Steps: - Navigate to the JqueryIndexPage - Instanciate the Page Object of the
+	 * JqueryIndexPage so we can start using the Emergya WorkFlow - Check if the
+	 * page is ready using a public method of the Page Object, this method must use
+	 * the Custom Handler and the file.properties.
 	 * 
 	 * 
 	 * Post steps: - Close the browser
