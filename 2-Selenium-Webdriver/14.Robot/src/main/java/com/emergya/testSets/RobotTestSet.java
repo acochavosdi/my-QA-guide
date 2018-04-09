@@ -47,15 +47,14 @@ public class RobotTestSet extends BasicTestSet {
 	// ---------- US00013 - Robot -> Upload an image --------- //
 	// ******************************************************* //
 	/**
-	 * Description: TODO
+	 * Description: Using Basics of Robot Class
 	 * 
 	 * Pre steps: - Open the browser
 	 * 
-	 * Steps: - TODO
+	 * Steps: - Go to the page - Check if the page is ready - Upload a image using
+	 * the robot
 	 * 
 	 * Post steps: - Close the browser
-	 * 
-	 * Conclusion: TODO
 	 * 
 	 * 
 	 * @author acosanchez <acosanchez@emergya.com>
