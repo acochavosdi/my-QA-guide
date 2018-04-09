@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.my_qa_guide.Wait_Methods.demo.WaitMethods">
+      <class name="com.my_qa_guide.Wait_Methods.demo.WaitMethodsTest">
         <methods>
           <include name="cleanNavigatorAndCloseDriver"/>
-          <include name="initialize"/>
           <include name="waitMethods" invocation-numbers="0"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- com.my_qa_guide.Wait_Methods.demo.WaitMethods -->
+      </class> <!-- com.my_qa_guide.Wait_Methods.demo.WaitMethodsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
