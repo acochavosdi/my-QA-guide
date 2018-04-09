@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.649 sec - in com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest

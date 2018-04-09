@@ -59,14 +59,17 @@ public class JqueryMainPage extends BasePageObject {
 		return null;
 	}
 
-	public void searchStringOnSearchInput(String string) {
+	public void searchStringOnSearchInput(String string) throws InterruptedException {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - Start searchStringOnSearchInput method");
 
 		if (this.isElementVisibleByXPath(SEARCH_INPUT)) {
 
 			WebElement searchInput = this.getElementByXPath(SEARCH_INPUT);
 			searchInput.sendKeys(string);
-
+			log.warn("COSA1");
+			// Similar to Thread.sleep(miliseconds), but driver.sleep(seconds) is in seconds
+			driver.sleep(3);
+			log.warn("COSA2");
 			driver.clickIfExists(By.xpath(getXPath(SEARCH_SUBMIT_BUTTON)));
 
 		}
