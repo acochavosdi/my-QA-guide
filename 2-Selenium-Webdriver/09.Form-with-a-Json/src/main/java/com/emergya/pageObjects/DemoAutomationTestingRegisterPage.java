@@ -13,6 +13,7 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.emergya.selenium.drivers.EmergyaWebDriver;
 import com.emergya.selenium.pageObject.BasePageObject;
@@ -365,7 +366,21 @@ public class DemoAutomationTestingRegisterPage extends BasePageObject {
 
 	}
 
-	public boolean PutCountry(String country) {
+	public boolean putSkillsBySelectClass(String skills) throws InterruptedException {
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - Start putSkills method");
+		boolean status = false;
+
+		if (this.isElementVisibleById(SKILLS_ID)) {
+			Select select = new Select(this.getElementById(SKILLS_ID));
+			Thread.sleep(1000);
+			select.selectByValue(skills);
+			status = true;
+		}
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - End putSkills method");
+		return status;
+	}
+
+	public boolean PutCountryUsingAList(String country) {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - Start PutCountry method");
 		boolean status = false;
 
@@ -451,6 +466,11 @@ public class DemoAutomationTestingRegisterPage extends BasePageObject {
 					status = true;
 				}
 			}
+		}
+
+		if (this.isElementVisibleByXPath(SELECT_MONTH_XPATH)) {
+			Select select = new Select(this.getElementByXPath(SELECT_MONTH_XPATH));
+			select.selectByValue(month);
 		}
 
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - End putYear method");

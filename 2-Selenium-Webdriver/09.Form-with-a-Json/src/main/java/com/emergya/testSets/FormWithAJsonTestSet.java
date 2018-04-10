@@ -51,7 +51,6 @@ public class FormWithAJsonTestSet extends BasicTestSet {
 
 	/**
 	 * 
-	 * TODO TODA ESTA DOCUMENTACION
 	 * 
 	 * Description: Test the Register Page and form of the app, using Json as an
 	 * entry format with the data of a fictional user, in order to test all the
@@ -63,13 +62,9 @@ public class FormWithAJsonTestSet extends BasicTestSet {
 	 * 
 	 * Steps: - Go to the RegisterPage - Check that the form is displayed - Read the
 	 * json file and fill an object with the data - Test every field of the form
-	 * sending as argument the fields of the object filled with the json - TODO
-	 * Check that several results are displayed
+	 * sending as argument the fields of the object filled with the json -
 	 * 
 	 * Post steps: - Close the browser
-	 * 
-	 * Acquired Knowledge: BufferedReader - Gson - Robot - sendKeys() -
-	 * element.getAttribute().isEmpty - element.getText() -
 	 * 
 	 * @author acosanchez <acosanchez@emergya.com>
 	 * @param method
@@ -101,24 +96,47 @@ public class FormWithAJsonTestSet extends BasicTestSet {
 		assertTrue(demoAutomationTestingRegisterPage.checkIfNameIsEmpty(),
 				"Refresh button didn't worked, name still not empty");
 
-		// Testing Full Form
+		/*
+		 * Lets Fill the Form
+		 */
+
+		// INPUT TEXT Name, LastName, Adress, Email and Phone
 		assertTrue(demoAutomationTestingRegisterPage.putNameOnForm(user.getName()), "Error inserting name");
 		assertTrue(demoAutomationTestingRegisterPage.putLastNameOnForm(user.getLastName()),
 				"Error inserting lastname ");
 		assertTrue(demoAutomationTestingRegisterPage.putAdressOnForm(user.getAdress()), "Error inserting lastname");
 		assertTrue(demoAutomationTestingRegisterPage.putEmailOnForm(user.getEmail()), "Error inserting email");
 		assertTrue(demoAutomationTestingRegisterPage.putPhoneOnForm(user.getPhone()), "Error insterting phone");
+
+		// INPUT RADIO
 		assertTrue(demoAutomationTestingRegisterPage.putGender(user.getGender()), "Error inserting gender");
+
+		// INPUT CHECKBOX
 		assertTrue(demoAutomationTestingRegisterPage.putHobbies(user.getHobbies()), "Error inserting hobbies");
+
+		// MULTISELECT
+
 		assertTrue(demoAutomationTestingRegisterPage.putLanguages(user.getLanguages()), "Error selecting languages");
-		assertTrue(demoAutomationTestingRegisterPage.putSkills(user.getSkills()), "Error selecting skills");
-		assertTrue(demoAutomationTestingRegisterPage.PutCountry(user.getCountry()), "Error selecting country");
+
+		// SELECT TYPE TEXT WITHOUT USING SELECT CLASS
+		assertTrue(demoAutomationTestingRegisterPage.putSkillsBySelectClass(user.getSkills()),
+				"Error selecting skills");
+
+		// SELECT TYPE TEXT WITHOUT USING SELECT CLASS
+		assertTrue(demoAutomationTestingRegisterPage.PutCountryUsingAList(user.getCountry()),
+				"Error selecting country");
+
+		// SELECT WITH A SEARCHER INSIDE
 		assertTrue(demoAutomationTestingRegisterPage.PutSecondCountry(user.getSecondCountryTextEntry(),
 				user.getSecondCountryChoose()), "Error selectin secondCountry");
 		Thread.sleep(2000); // Wait a few for safe-execution of the next method
+
+		// SELECT TYPE TEXT
 		assertTrue(demoAutomationTestingRegisterPage.PutBirthYear(user.getBirthYear()), "Error selecting year");
 		assertTrue(demoAutomationTestingRegisterPage.PutBirthMonth(user.getBirthMonth()), "Error selecting month");
 		assertTrue(demoAutomationTestingRegisterPage.PutBirthDay(user.getBirthDay()), "Error selecting day");
+
+		// INPUT TYPE PASSWORD
 		assertTrue(demoAutomationTestingRegisterPage.putPassword(user.getPassword()), "error inserting password");
 		assertTrue(demoAutomationTestingRegisterPage.putVerifiedPassword(user.getPasswordVerified()),
 				"error inserting password");
