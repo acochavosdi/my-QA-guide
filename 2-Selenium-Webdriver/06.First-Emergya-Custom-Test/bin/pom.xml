@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.emergya</groupId>
@@ -38,7 +39,7 @@
 		<aspectj.version>1.8.9</aspectj.version>
 
 		<!-- Default test suite -->
-		<test.suite>src/main/resources/suites/emergyaAcceptanceTest.xml</test.suite>
+		<test.suite>src/main/resources/suites/JqueryAcceptanceTest.xml</test.suite>
 
 		<!-- Default parameters for selenium -->
 		<environment.url>http://www.google.es</environment.url>
@@ -128,16 +129,16 @@
 
 		<!-- Test suites profiles -->
 		<profile>
-			<id>Emergya-Acceptance</id>
+			<id>Jquery-Acceptance</id>
 			<properties>
-				<test.suite>src/main/resources/suites/emergyaAcceptanceTest.xml</test.suite>
+				<test.suite>src/main/resources/suites/JqueryAcceptanceTest.xml</test.suite>
 			</properties>
 		</profile>
 
 		<profile>
-			<id>Emergya-Regression</id>
+			<id>Jquery-Regression</id>
 			<properties>
-				<test.suite>src/main/resources/suites/emergyaRegressionTest.xml</test.suite>
+				<test.suite>src/main/resources/suites/JqueryRegressionTest.xml</test.suite>
 			</properties>
 		</profile>
 	</profiles>

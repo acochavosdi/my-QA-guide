@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This test suite contains all the regression tests -->
+<suite name="JqueryRegressionTest" enabled="true"
+	configfailurepolicy="continue">
+	<test name="JqueryTest" order-by-instances="true">
+		<classes>
+			<class name="com.emergya.testSets.JqueryTestSet">
+				<methods>
+					<include name="firstTestWithEmergyaQA" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
