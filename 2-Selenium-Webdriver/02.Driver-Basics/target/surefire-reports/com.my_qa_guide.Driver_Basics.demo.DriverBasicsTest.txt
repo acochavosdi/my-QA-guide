@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.my_qa_guide.Driver_Basics.demo.DriverBasicsTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.502 sec - in com.my_qa_guide.Driver_Basics.demo.DriverBasicsTest

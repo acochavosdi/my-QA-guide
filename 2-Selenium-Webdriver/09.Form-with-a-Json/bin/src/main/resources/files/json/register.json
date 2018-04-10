@@ -1,0 +1,31 @@
+{
+	"name": "Carlos",
+	"lastName": "Garcia",
+	"adress": "Calle Falsa 123",
+	"email": "me@me.es",
+	"phone": "1234567891",
+	"gender": "Male",
+	"hobbies": 
+	[
+		"Cricket",
+		"Movies",
+		"Hockey"
+	],
+
+	"languages": 
+	[
+		"English",
+		"Spanish",
+		"Russian"
+	],
+
+	"skills": "Mac",
+	"country": "Spain",
+	"secondCountryTextEntry": "a",
+	"secondCountryChoose": "Denmark",
+	"birthYear": "1987",
+	"birthMonth": "3",
+	"birthDay": "21",
+	"password": "QAtesting123",
+	"passwordVerified": "QAtesting123"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="5197" started-at="2018-04-09T11:27:22Z" finished-at="2018-04-09T11:27:27Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="5197" started-at="2018-04-09T11:27:22Z" finished-at="2018-04-09T11:27:27Z">
+      <class name="com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@13c78c0b]" name="initialize" is-config="true" duration-ms="2441" started-at="2018-04-09T11:27:22Z" finished-at="2018-04-09T11:27:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="elementsBasics()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@13c78c0b]" name="elementsBasics" duration-ms="2594" started-at="2018-04-09T11:27:24Z" finished-at="2018-04-09T11:27:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- elementsBasics -->
+        <test-method status="PASS" signature="cleanNavigatorAndCloseDriver()[pri:0, instance:com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest@13c78c0b]" name="cleanNavigatorAndCloseDriver" is-config="true" duration-ms="135" started-at="2018-04-09T11:27:27Z" finished-at="2018-04-09T11:27:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanNavigatorAndCloseDriver -->
+      </class> <!-- com.my_qa_guide.Elements_Basics.demo.ElementsBasicsTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
