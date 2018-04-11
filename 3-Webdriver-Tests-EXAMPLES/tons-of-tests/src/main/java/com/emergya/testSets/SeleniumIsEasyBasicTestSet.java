@@ -10,6 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.emergya.pageObjects.SeleniumIsEasyCheckBoxPage;
 import com.emergya.pageObjects.SeleniumIsEasySimpleFormPage;
 import com.emergya.pageObjects.SeleniumIsEasyTestPage;
 import com.emergya.utils.BasicTestSet;
@@ -149,6 +150,49 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 	@Test(description = "checkBoxTest")
 	public void checkBoxTest(Method method) {
 		log.info("[log-TestSet] " + this.getClass().getName() + " - Start test method: " + method.getName());
+
+		driver.get(SELENIUM_IS_EASY_INDEX_URL);
+		SeleniumIsEasyTestPage seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver);
+		assertTrue(seleniumIsEasyTestPage.isReady(), "Index page not ready");
+
+		SeleniumIsEasyCheckBoxPage seleniumIsEasyCheckBoxPage = seleniumIsEasyTestPage.goToTheCheckBoxPage();
+
+		/*
+		 * Single Check Box - Using the visibility of the div to check if selected.
+		 */
+
+		assertTrue(seleniumIsEasyCheckBoxPage.clickOnTheSingleCheckBox(), "Check Box not found");
+		seleniumIsEasyCheckBoxPage.printStatusOfTheCheckBox();
+		driver.sleep(2);
+		assertTrue(seleniumIsEasyCheckBoxPage.clickOnTheSingleCheckBox(), "Check Box not found");
+		seleniumIsEasyCheckBoxPage.printStatusOfTheCheckBox();
+		driver.sleep(2);
+
+		/*
+		 * Multiple Check Box - Using isSelected();
+		 */
+
+		// Testing if Uncheck All only apperas when 4 inputs selected
+		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(1);
+		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(2);
+		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(3);
+		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(4);
+		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+
+		// Testing if the Uncheck All uncheck all the inputs
+		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxButton();
+		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+
+		// Testing if the Check All check all the inputs
+		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(2);
+		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(3);
+		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxButton();
+		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
 
 		log.info("[log-TestSet] " + this.getClass().getName() + " - End test method: " + method.getName());
 	}
