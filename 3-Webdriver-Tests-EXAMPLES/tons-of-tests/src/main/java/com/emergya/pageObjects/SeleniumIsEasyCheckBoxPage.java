@@ -44,6 +44,9 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 		return status;
 	}
 
+	/*
+	 * Click on the Single Check Box
+	 */
 	public boolean clickOnTheSingleCheckBox() {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - Start clickOnTheSingleCheckBox method");
 
@@ -59,6 +62,9 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 		return status;
 	}
 
+	/**
+	 * Print the status of the checkbox.
+	 */
 	public void printStatusOfTheCheckBox() {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - Start printStatusOfTheCheckBox method");
 
@@ -72,6 +78,12 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 
 	}
 
+	/**
+	 * click on the button specified on "@param". Values: 1,2,3 or 4
+	 * 
+	 * @param index,
+	 *            the index of the button to click
+	 */
 	public void clickOnMultipleCheckBoxInputNumber(int index) {
 
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
@@ -108,6 +120,9 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 
 	}
 
+	/**
+	 * Click on the Multiple Check Box Button
+	 */
 	public void clickOnMultipleCheckBoxButton() {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
 				+ " - Start clickOnMultipleCheckBoxButton method");
@@ -178,6 +193,10 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 		return status;
 	}
 
+	/**
+	 * 
+	 * @return true if 'Check All' button select every input
+	 */
 	public boolean isCheckAllButtonSelectingAllInputs() {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
 				+ " - Start isCheckAllButtonSelectingAllInputs method");
@@ -202,6 +221,9 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 		return status;
 	}
 
+	/**
+	 * Print the status of the inputs and what button is displayed at the moment
+	 */
 	public void printInfoAboutTheCheckBoxesAndTheButtonStatus() {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
 				+ " - Start clickOnMultipleCheckBoxInputNumber method");
@@ -240,6 +262,10 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 				+ " - End clickOnMultipleCheckBoxInputNumber method");
 	}
 
+	/**
+	 * 
+	 * @return true if the button "Uncheck All" is displayed
+	 */
 	public boolean isTheButtonUncheckAllDisplayed() {
 
 		WebElement button = this.getElementById(MULTIPLE_CHECK_BOX_BUTTON_ID, 3);

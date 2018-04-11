@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.emergya.pageObjects.SeleniumIsEasyCheckBoxPage;
+import com.emergya.pageObjects.SeleniumIsEasyRadioButtonsPage;
 import com.emergya.pageObjects.SeleniumIsEasySimpleFormPage;
 import com.emergya.pageObjects.SeleniumIsEasyTestPage;
 import com.emergya.utils.BasicTestSet;
@@ -208,13 +209,39 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 		log.info("[log-TestSet] " + this.getClass().getName() + " - Start test method: " + method.getName());
 
 		driver.get(SELENIUM_IS_EASY_INDEX_URL);
-		isReady(seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver));
+		SeleniumIsEasyTestPage seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver);
+		assertTrue(seleniumIsEasyTestPage.isReady(), "Index page not ready");
 
-		try {
+		SeleniumIsEasyRadioButtonsPage seleniumIsEasyRadioButtonsPage = seleniumIsEasyTestPage
+				.goToTheRadioButtonsPage();
 
-		} finally {
+		/*
+		 * SINGLE RADIO BUTTON DEMO
+		 */
 
-		}
+		assertTrue(seleniumIsEasyRadioButtonsPage.isSingleRadioButtonWorkingWithMale(),
+				"Single Radio Button not working well with male option");
+		driver.sleep(2);
+		assertTrue(seleniumIsEasyRadioButtonsPage.isSingleRadioButtonWorkingWithFemale(),
+				"Single Radio Button not working well with female option");
+		driver.sleep(2);
+
+		/*
+		 * GROUP RADIO BUTTONS DEMO
+		 */
+
+		assertTrue(seleniumIsEasyRadioButtonsPage.isRadioButtonsWorkingWithValues("male", "range1"),
+				"Group radio button failed with male + range 0-5");
+		assertTrue(seleniumIsEasyRadioButtonsPage.isRadioButtonsWorkingWithValues("male", "range2"),
+				"Group radio button failed with male + range 5-15");
+		assertTrue(seleniumIsEasyRadioButtonsPage.isRadioButtonsWorkingWithValues("male", "range3"),
+				"Group radio button failed with male + range 15-50");
+		assertTrue(seleniumIsEasyRadioButtonsPage.isRadioButtonsWorkingWithValues("female", "range1"),
+				"Group radio button failed with female + range 0-5");
+		assertTrue(seleniumIsEasyRadioButtonsPage.isRadioButtonsWorkingWithValues("female", "range2"),
+				"Group radio button failed with female + range 5-15");
+		assertTrue(seleniumIsEasyRadioButtonsPage.isRadioButtonsWorkingWithValues("female", "range3"),
+				"Group radio button failed with female + range 5-50");
 
 		log.info("[log-TestSet] " + this.getClass().getName() + " - End test method: " + method.getName());
 	}

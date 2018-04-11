@@ -90,4 +90,27 @@ public class SeleniumIsEasyTestPage extends BasePageObject {
 		return null;
 	}
 
+	public SeleniumIsEasyRadioButtonsPage goToTheRadioButtonsPage() {
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - Start goToTheRadioButtonsPage method");
+
+		if (this.isElementVisibleById(BUTTON_TO_SHOW_THE_BASIC_TESTS_ID)) {
+			this.getElementById(BUTTON_TO_SHOW_THE_BASIC_TESTS_ID).click();
+
+			driver.sleep(1);
+			if (this.isElementVisibleByXPath(LINK_TO_RADIO_BUTTONS_PAGE_XPATH)) {
+
+				this.getElementByXPath(LINK_TO_RADIO_BUTTONS_PAGE_XPATH).click();
+				log.info("[log-PageObjects] " + this.getClass().getSimpleName()
+						+ " - End goToTheRadioButtonsPage method");
+				return new SeleniumIsEasyRadioButtonsPage(driver);
+
+			}
+
+		}
+
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName() + " - End goToTheRadioButtonsPage method");
+
+		return null;
+	}
+
 }
