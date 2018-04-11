@@ -119,6 +119,89 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 				"[log-PageObjects] " + this.getClass().getSimpleName() + " - End clickOnMultipleCheckBoxButton method");
 	}
 
+	/**
+	 * 
+	 * @return true if UncheckAll Button is only displayed when 4 inputs are
+	 *         selected
+	 */
+	public boolean isButtonUncheckAllOnlyDisplayedWhen4InputsAreSelected() {
+
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
+				+ " - Start isButtonUncheckAllOnlyDisplayedWhen4InputsAreSelected method");
+		boolean status = false;
+
+		this.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		if (this.isTheButtonUncheckAllDisplayed())
+			status = false;
+		this.clickOnMultipleCheckBoxInputNumber(1);
+		this.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		if (!this.isTheButtonUncheckAllDisplayed())
+			status = false;
+		this.clickOnMultipleCheckBoxInputNumber(2);
+		this.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		if (!this.isTheButtonUncheckAllDisplayed())
+			status = false;
+		this.clickOnMultipleCheckBoxInputNumber(3);
+		this.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		if (!this.isTheButtonUncheckAllDisplayed())
+			status = false;
+		this.clickOnMultipleCheckBoxInputNumber(4);
+		this.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		if (this.isTheButtonUncheckAllDisplayed())
+			status = true;
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
+				+ " - End isButtonUncheckAllOnlyDisplayedWhen4InputsAreSelected method");
+		return status;
+	}
+
+	/**
+	 * 
+	 * @return true if UncheckAllButtons deselect every input
+	 */
+	public boolean isUncheckAllButtonDeselectingEveryInput() {
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
+				+ " - Start isUncheckAllButtonDeselectingEveryInput method");
+		boolean status = false;
+
+		this.clickOnMultipleCheckBoxButton();
+		this.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		WebElement checkBox1 = this.getElementByXPath(MULTIPLE_CHECK_BOX_INPUT1_XPATH, 3);
+		WebElement checkBox2 = this.getElementByXPath(MULTIPLE_CHECK_BOX_INPUT2_XPATH, 3);
+		WebElement checkBox3 = this.getElementByXPath(MULTIPLE_CHECK_BOX_INPUT3_XPATH, 3);
+		WebElement checkBox4 = this.getElementByXPath(MULTIPLE_CHECK_BOX_INPUT4_XPATH, 3);
+
+		if (!(checkBox1.isSelected() || checkBox2.isSelected() || checkBox3.isSelected() || checkBox4.isSelected()))
+			status = true;
+
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
+				+ " - End isUncheckAllButtonDeselectingEveryInput method");
+		return status;
+	}
+
+	public boolean isCheckAllButtonSelectingAllInputs() {
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
+				+ " - Start isCheckAllButtonSelectingAllInputs method");
+		boolean status = false;
+
+		WebElement checkBox1 = this.getElementByXPath(MULTIPLE_CHECK_BOX_INPUT1_XPATH, 3);
+		WebElement checkBox2 = this.getElementByXPath(MULTIPLE_CHECK_BOX_INPUT2_XPATH, 3);
+		WebElement checkBox3 = this.getElementByXPath(MULTIPLE_CHECK_BOX_INPUT3_XPATH, 3);
+		WebElement checkBox4 = this.getElementByXPath(MULTIPLE_CHECK_BOX_INPUT4_XPATH, 3);
+
+		this.clickOnMultipleCheckBoxInputNumber(2);
+		this.clickOnMultipleCheckBoxInputNumber(3);
+		this.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		this.clickOnMultipleCheckBoxButton();
+		this.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+
+		if (checkBox1.isSelected() || checkBox2.isSelected() || checkBox3.isSelected() || checkBox4.isSelected())
+			status = true;
+
+		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
+				+ " - End isCheckAllButtonSelectingAllInputs method");
+		return status;
+	}
+
 	public void printInfoAboutTheCheckBoxesAndTheButtonStatus() {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
 				+ " - Start clickOnMultipleCheckBoxInputNumber method");
@@ -155,5 +238,15 @@ public class SeleniumIsEasyCheckBoxPage extends BasePageObject {
 			log.info("Button displayed is Check All");
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
 				+ " - End clickOnMultipleCheckBoxInputNumber method");
+	}
+
+	public boolean isTheButtonUncheckAllDisplayed() {
+
+		WebElement button = this.getElementById(MULTIPLE_CHECK_BOX_BUTTON_ID, 3);
+		boolean status = false;
+		if (button.getAttribute("value").equals("Uncheck All"))
+			status = true;
+
+		return status;
 	}
 }

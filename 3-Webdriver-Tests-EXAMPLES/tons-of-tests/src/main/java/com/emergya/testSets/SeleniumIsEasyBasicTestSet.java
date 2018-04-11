@@ -169,30 +169,20 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 		driver.sleep(2);
 
 		/*
-		 * Multiple Check Box - Using isSelected();
+		 * Multiple Check Box - Using isSelected() method.
 		 */
 
 		// Testing if Uncheck All only apperas when 4 inputs selected
-		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
-		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(1);
-		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
-		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(2);
-		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
-		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(3);
-		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
-		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(4);
-		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		assertTrue(seleniumIsEasyCheckBoxPage.isButtonUncheckAllOnlyDisplayedWhen4InputsAreSelected(),
+				"Uncheck All Button not working as client desire");
 
 		// Testing if the Uncheck All uncheck all the inputs
-		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxButton();
-		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		assertTrue(seleniumIsEasyCheckBoxPage.isUncheckAllButtonDeselectingEveryInput(),
+				"Uncheck All Button didnt deselect the inputs");
 
 		// Testing if the Check All check all the inputs
-		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(2);
-		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxInputNumber(3);
-		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
-		seleniumIsEasyCheckBoxPage.clickOnMultipleCheckBoxButton();
-		seleniumIsEasyCheckBoxPage.printInfoAboutTheCheckBoxesAndTheButtonStatus();
+		assertTrue(seleniumIsEasyCheckBoxPage.isCheckAllButtonSelectingAllInputs(),
+				"Check All Button didnt selected the inputs");
 
 		log.info("[log-TestSet] " + this.getClass().getName() + " - End test method: " + method.getName());
 	}
