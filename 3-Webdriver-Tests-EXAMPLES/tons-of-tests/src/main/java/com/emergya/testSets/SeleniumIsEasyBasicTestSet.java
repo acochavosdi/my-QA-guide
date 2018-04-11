@@ -1,5 +1,6 @@
 package com.emergya.testSets;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.lang.reflect.Method;
@@ -25,11 +26,13 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 	 * Constants
 	 */
 
+	// URLS
 	private static final String SELENIUM_IS_EASY_INDEX_URL = "http://www.seleniumeasy.com/test/";
 
-	/*
-	 * Constructor
-	 */
+	// DATA CONSTANTS
+	private static final String MESSAGE_TO_SIMPLE_FORM_SINGLE_INPUT = "Hi Mr.QA";
+	private static final String VALUE_A = "3";
+	private static final String VALUE_B = "4";
 
 	public SeleniumIsEasyBasicTestSet() {
 		super();
@@ -72,7 +75,7 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 	 * 
 	 * Pre steps: - Open the browser
 	 * 
-	 * Steps: -
+	 * Steps: - TODO
 	 * 
 	 * Post steps: - Close the browser
 	 * 
@@ -83,10 +86,45 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 
 		driver.get(SELENIUM_IS_EASY_INDEX_URL);
 		SeleniumIsEasyTestPage seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver);
-
 		assertTrue(seleniumIsEasyTestPage.isReady(), "Index page not ready");
 
 		SeleniumIsEasySimpleFormPage seleniumIsEasySimpleFormPage = seleniumIsEasyTestPage.goToTheSimpleFormPage();
+
+		/*
+		 * Single input Section
+		 * 
+		 * - Write on the input
+		 * 
+		 * - Press the Button
+		 * 
+		 * - Check if the returned message is equals to the sent message
+		 */
+
+		assertTrue(seleniumIsEasySimpleFormPage.writeOnTheSingleInput(MESSAGE_TO_SIMPLE_FORM_SINGLE_INPUT),
+				"Missed input field");
+		assertTrue(seleniumIsEasySimpleFormPage.clickOnShowMessage(), "Button show message not found");
+		assertEquals(seleniumIsEasySimpleFormPage.getTheReturnedMessage(), MESSAGE_TO_SIMPLE_FORM_SINGLE_INPUT,
+				"messages didnt match");
+		/*
+		 * Two input Section
+		 * 
+		 * - Write on Both inputs
+		 * 
+		 * - Press the Button
+		 * 
+		 * - Check if the returned total is equals to the sum of both sent values
+		 */
+
+		int number1 = Integer.parseInt(VALUE_A);
+		int number2 = Integer.parseInt(VALUE_B);
+		int sum = number1 + number2;
+
+		assertTrue(seleniumIsEasySimpleFormPage.writeValueOfA(VALUE_A), "Input for value a not found");
+		assertTrue(seleniumIsEasySimpleFormPage.writeValueOfB(VALUE_B), "Input for value b not found");
+		assertTrue(seleniumIsEasySimpleFormPage.clickOnGetTotal(), "Button Get Total not found");
+		assertEquals(Integer.parseInt(seleniumIsEasySimpleFormPage.getTheReturnedTotal()), sum,
+				"Returned Total not match");
+
 		driver.sleep(5);
 
 		log.info("[log-TestSet] " + this.getClass().getName() + " - End test method: " + method.getName());
@@ -103,7 +141,7 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 	 * 
 	 * Pre steps: - Open the browser
 	 * 
-	 * Steps: -
+	 * Steps: - TODO
 	 * 
 	 * Post steps: - Close the browser
 	 * 
