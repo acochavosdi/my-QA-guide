@@ -1,17 +1,17 @@
 package com.emergya.pageObjects;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
 
 import org.apache.log4j.Logger;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import com.emergya.selenium.drivers.EmergyaWebDriver;
 import com.emergya.selenium.pageObject.BasePageObject;
-import com.google.common.collect.Lists;
 
 public class SeleniumIsEasyDropDownPage extends BasePageObject {
 
@@ -27,10 +27,12 @@ public class SeleniumIsEasyDropDownPage extends BasePageObject {
 	private static final String UNIQUE_ELEMENT_OF_THIS_PAGE_XPATH = "uniqueElement";
 	private static final String SELECT_LIST_SELECT_ID = "selectListDemoSelect";
 	private static final String SELECT_LIST_DISPLAY_XPATH = "selectListDemoDisplay";
-	private static final String MULTI_SELECT_SELECT_ID = "multiSelectListDemoSelect";
 	private static final String MULTI_SELECT_FIRST_SELECTED_BUTTON_ID = "multiSelectFirstSelectedButton";
 	private static final String MULTI_SELECT_GET_ALL_SELECTED_BUTTON_ID = "multiSelectGetAllSelectedButton";
 	private static final String MULTI_SELECT_DISPLAY_XPATH = "multiSelectDisplay";
+	private static final String ELEMENT_CALIFORNIA = "elementCalifornia";
+	private static final String ELEMENT_FLORIDA = "elementFlorida";
+	private static final String ELEMENT_OHIO = "elementOhio";
 
 	public SeleniumIsEasyDropDownPage(EmergyaWebDriver driver) {
 		super(driver);
@@ -73,84 +75,52 @@ public class SeleniumIsEasyDropDownPage extends BasePageObject {
 		return status;
 	}
 
-	public boolean isFirstSelectedButtonWorkingCorrectly() {
+	public boolean isMultiSelectWorkingCorrectly() {
 		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
-				+ " - Start isFirstSelectedButtonWorkingCorrectly method");
-		boolean status = false;
+				+ " - Start isMultiSelectWorkingCorrectly method");
 
-		if (this.isElementVisibleById(MULTI_SELECT_SELECT_ID)) {
+		WebElement element1 = this.getElementByXPath(ELEMENT_CALIFORNIA);
+		WebElement element2 = this.getElementByXPath(ELEMENT_FLORIDA);
+		WebElement element3 = this.getElementByXPath(ELEMENT_OHIO);
 
-			Select select = new Select(this.getElementById(MULTI_SELECT_SELECT_ID));
+		ArrayList<String> elements = new ArrayList<>();
+		elements.add(element1.getText());
+		elements.add(element2.getText());
+		elements.add(element3.getText());
 
-			select.selectByValue("California");
-			select.selectByValue("Florida");
-			select.selectByValue("Ohio");
+		// SELECTING FIELDS
+		Actions builder = new Actions(driver);
+		Action seriesOfActions = builder.keyDown(Keys.CONTROL).click(element1).click(element2).click(element3)
+				.keyUp(Keys.CONTROL).build();
+		seriesOfActions.perform();
 
-			if (this.isElementVisibleById(MULTI_SELECT_FIRST_SELECTED_BUTTON_ID)) {
-				this.getElementById(MULTI_SELECT_FIRST_SELECTED_BUTTON_ID).click();
-
-				if (this.isElementVisibleByXPath(MULTI_SELECT_DISPLAY_XPATH)) {
-					if (this.getElementByXPath(MULTI_SELECT_DISPLAY_XPATH).getText()
-							.contains(select.getFirstSelectedOption().getText())) {
-						log.info("VALUE OF FIRSTSELECTIONOPTION METHOD: " + select.getFirstSelectedOption().getText());
-						log.info("VALUE OF DISPLAY: " + this.getElementByXPath(MULTI_SELECT_DISPLAY_XPATH).getText());
-						status = true;
-					} else {
-						log.info("VALUE OF FIRSTSELECTIONOPTION METHOD: " + select.getFirstSelectedOption().getText());
-						log.info("VALUE OF DISPLAY: " + this.getElementByXPath(MULTI_SELECT_DISPLAY_XPATH).getText());
-						status = false;
-					}
-				}
-			}
-
+		// FIRST SELECTED TEST
+		boolean statusOfFirstTest = false;
+		this.getElementById(MULTI_SELECT_FIRST_SELECTED_BUTTON_ID).click();
+		if (this.getElementByXPath(MULTI_SELECT_DISPLAY_XPATH).getText().contains(element1.getText())) {
+			statusOfFirstTest = true;
 		}
+		driver.sleep(3);
 
-		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
-				+ " - End isFirstSelectedButtonWorkingCorrectly method");
-		return status;
-	}
-
-	public boolean isGetAllSelectedButtonWorkingCorrectly() {
-		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
-				+ " - Start isGetAllSelectedButtonWorkingCorrectly method");
-		boolean status = false;
-
-		if (this.isElementVisibleById(MULTI_SELECT_SELECT_ID)) {
-
-			Select select = new Select(this.getElementById(MULTI_SELECT_SELECT_ID));
-
-			select.selectByValue("California");
-			select.selectByValue("Florida");
-			select.selectByValue("Ohio");
-
-			if (this.isElementVisibleById(MULTI_SELECT_GET_ALL_SELECTED_BUTTON_ID)) {
-				this.getElementById(MULTI_SELECT_GET_ALL_SELECTED_BUTTON_ID).click();
-			}
-
-			if (this.isElementVisibleByXPath(MULTI_SELECT_DISPLAY_XPATH)) {
-				List<WebElement> elementsList = select.getAllSelectedOptions();
-				boolean aux = true;
-
-				for (WebElement webElement : elementsList) {
-					if (this.getElementByXPath(MULTI_SELECT_DISPLAY_XPATH).getText().contains(webElement.getText())) {
-						if (aux) {
-							aux = true;
-						} else {
-							aux = false;
-						}
-					} else {
-						aux = false;
-					}
-				}
+		// GET ALL SELECTED TEST
+		boolean statusOfSecondTest = false;
+		this.getElementById(MULTI_SELECT_GET_ALL_SELECTED_BUTTON_ID).click();
+		boolean aux = true;
+		for (String string : elements) {
+			if (this.getElementByXPath(MULTI_SELECT_DISPLAY_XPATH).getText().contains(string)) {
 				if (aux) {
-					status = true;
+					statusOfSecondTest = true;
+				} else {
+					aux = false;
 				}
+			} else {
+				aux = false;
 			}
-
 		}
-
-		log.info("[log-PageObjects] " + this.getClass().getSimpleName()
-				+ " - End isGetAllSelectedButtonWorkingCorrectlys method");
-		return status;
+		driver.sleep(3);
+		log.info(
+				"[log-PageObjects] " + this.getClass().getSimpleName() + " - End isMultiSelectWorkingCorrectly method");
+		return statusOfFirstTest && statusOfSecondTest;
 	}
+
 }

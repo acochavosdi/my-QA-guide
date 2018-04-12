@@ -290,11 +290,8 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 		 * MULTI SELECT LIST DEMO
 		 */
 
-		// assertTrue(seleniumIsEasyDropDownPage.isFirstSelectedButtonWorkingCorrectly(),
-		// "First Selected Button not working correctly");
+		assertTrue(seleniumIsEasyDropDownPage.isMultiSelectWorkingCorrectly(), "Button First Not Working");
 
-		seleniumIsEasyDropDownPage.isGetAllSelectedButtonWorkingCorrectly();
-		log.info("[log-TestSet] " + this.getClass().getName() + " - End test method: " + method.getName());
 	}
 
 	// *************************** TESTS **************************** //
