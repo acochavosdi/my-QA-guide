@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 
 import com.emergya.pageObjects.SeleniumIsEasyCheckBoxPage;
 import com.emergya.pageObjects.SeleniumIsEasyDropDownPage;
+import com.emergya.pageObjects.SeleniumIsEasyJavascriptAlertsPage;
 import com.emergya.pageObjects.SeleniumIsEasyRadioButtonsPage;
 import com.emergya.pageObjects.SeleniumIsEasySimpleFormPage;
 import com.emergya.pageObjects.SeleniumIsEasyTestPage;
@@ -91,7 +92,8 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 		SeleniumIsEasyTestPage seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver);
 		assertTrue(seleniumIsEasyTestPage.isReady(), "Index page not ready");
 
-		SeleniumIsEasySimpleFormPage seleniumIsEasySimpleFormPage = seleniumIsEasyTestPage.goToTheSimpleFormPage();
+		SeleniumIsEasySimpleFormPage seleniumIsEasySimpleFormPage = (SeleniumIsEasySimpleFormPage) seleniumIsEasyTestPage
+				.goToAPage("US00001");
 
 		/*
 		 * Single input Section
@@ -157,7 +159,8 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 		SeleniumIsEasyTestPage seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver);
 		assertTrue(seleniumIsEasyTestPage.isReady(), "Index page not ready");
 
-		SeleniumIsEasyCheckBoxPage seleniumIsEasyCheckBoxPage = seleniumIsEasyTestPage.goToTheCheckBoxPage();
+		SeleniumIsEasyCheckBoxPage seleniumIsEasyCheckBoxPage = (SeleniumIsEasyCheckBoxPage) seleniumIsEasyTestPage
+				.goToAPage("US00002");
 
 		/*
 		 * Single Check Box - Using the visibility of the div to check if selected.
@@ -213,8 +216,8 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 		SeleniumIsEasyTestPage seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver);
 		assertTrue(seleniumIsEasyTestPage.isReady(), "Index page not ready");
 
-		SeleniumIsEasyRadioButtonsPage seleniumIsEasyRadioButtonsPage = seleniumIsEasyTestPage
-				.goToTheRadioButtonsPage();
+		SeleniumIsEasyRadioButtonsPage seleniumIsEasyRadioButtonsPage = (SeleniumIsEasyRadioButtonsPage) seleniumIsEasyTestPage
+				.goToAPage("US00003");
 
 		/*
 		 * SINGLE RADIO BUTTON DEMO
@@ -271,7 +274,8 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 		SeleniumIsEasyTestPage seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver);
 		assertTrue(seleniumIsEasyTestPage.isReady(), "Index page not ready");
 
-		SeleniumIsEasyDropDownPage seleniumIsEasyDropDownPage = seleniumIsEasyTestPage.goToTheDropDownPage();
+		SeleniumIsEasyDropDownPage seleniumIsEasyDropDownPage = (SeleniumIsEasyDropDownPage) seleniumIsEasyTestPage
+				.goToAPage("US00004");
 		assertTrue(seleniumIsEasyDropDownPage.isReady(), "Dropdown Page not ready");
 
 		/*
@@ -315,13 +319,24 @@ public class SeleniumIsEasyBasicTestSet extends BasicTestSet {
 		log.info("[log-TestSet] " + this.getClass().getName() + " - Start test method: " + method.getName());
 
 		driver.get(SELENIUM_IS_EASY_INDEX_URL);
-		isReady(seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver));
+		SeleniumIsEasyTestPage seleniumIsEasyTestPage = new SeleniumIsEasyTestPage(driver);
+		assertTrue(seleniumIsEasyTestPage.isReady(), "Index page not ready");
 
-		try {
+		SeleniumIsEasyJavascriptAlertsPage seleniumIsEasyJavascriptAlertsPage = (SeleniumIsEasyJavascriptAlertsPage) seleniumIsEasyTestPage
+				.goToAPage("US00005");
+		assertTrue(seleniumIsEasyJavascriptAlertsPage.isReady(), "Javascript Alert Page not ready");
 
-		} finally {
+		// ALERT BOX
+		assertTrue(seleniumIsEasyJavascriptAlertsPage.isAlertBoxWorking(), "Alert Box not working");
+		driver.sleep(2);
 
-		}
+		// CONFIRM BOX
+		assertTrue(seleniumIsEasyJavascriptAlertsPage.isConfirmBoxWorking(), "Confirm Box not working");
+		driver.sleep(2);
+
+		// TEXT BOX
+		assertTrue(seleniumIsEasyJavascriptAlertsPage.isTextBoxWorking("Hi Mr Robot"), "Text Box not working");
+		driver.sleep(2);
 
 		log.info("[log-TestSet] " + this.getClass().getName() + " - End test method: " + method.getName());
 	}

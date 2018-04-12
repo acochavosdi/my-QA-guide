@@ -7,9 +7,8 @@ The aim of this project is to provide some examples using Webdriver to acquire f
 ## Other valuable knowledge
 - [TestNg GUIDE](https://github.com/acochavosdi/my-QA-guide/tree/master/1-TestNG-GUIDE)
 
-## FULL TEST SET
+##  Summary Basic Level
 
-### Summary Basic Level
 <ul>
 <li> US00001 - Simple Form Demo Section </li>
 <li> US00002 - Check Box Demo Section </li>
